@@ -1,0 +1,16 @@
+SQL&gt; SET NULL'_'
+<br>
+SQL&gt; SET TAB OFF
+<br>
+SQL&gt; SET LINESIZE 1000
+<br>
+SQL&gt; SET NEWPAGE NONE
+<br>
+SQL&gt; SET TRIMS OFF
+<br>
+SQL&gt; SET NUHWIDTN 50
+<br>
+SP2-0158: unknown SET option &quot;NUHWIDTN&quot;
+<br>
+SQL&gt; SPOOL atelier3.html
+<br>

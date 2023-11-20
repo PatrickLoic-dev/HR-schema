@@ -1,0 +1,2182 @@
+SQL&gt; 
+<br>
+SQL&gt; SELECT DISTINCT e.Employee_id,e.first_name||' '||e.last_name &quot;Fullname&quot;, d.department_name,j.job_title,
+<br>
+  2      l.street_address||','||l.postal_code||','||l.city||','||c.country_name &quot;Adresse&quot;,m.first_name &quot;Chef Direct&quot;
+<br>
+  3  FROM Jobs j
+<br>
+  4  JOIN Employees e
+<br>
+  5  ON(j.job_id=e.job_id)
+<br>
+  6  JOIN departments d
+<br>
+  7  ON(e.department_id=d.department_id)
+<br>
+  8  JOIN Locations l
+<br>
+  9  ON(d.Location_id=l.Location_id)
+<br>
+ 10  JOIN countries c
+<br>
+ 11  ON(c.country_id=l.country_id)
+<br>
+ 12  JOIN Employees m
+<br>
+ 13  ON(e.Employee_id=m.manager_id);
+<br>
+<p>
+<table border='1' width='90%' align='center' summary='Script output'>
+<tr>
+<th scope="col">
+EMPLOYEE_ID
+</th>
+<th scope="col">
+Fullname
+</th>
+<th scope="col">
+DEPARTMENT_NAME
+</th>
+<th scope="col">
+JOB_TITLE
+</th>
+<th scope="col">
+Adresse
+</th>
+<th scope="col">
+Chef Direct
+</th>
+</tr>
+<tr>
+<td align="right">
+       101
+</td>
+<td>
+Neena Kochhar
+</td>
+<td>
+Executive
+</td>
+<td>
+Administration Vice President
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Nancy
+</td>
+</tr>
+<tr>
+<td align="right">
+       101
+</td>
+<td>
+Neena Kochhar
+</td>
+<td>
+Executive
+</td>
+<td>
+Administration Vice President
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Jennifer
+</td>
+</tr>
+<tr>
+<td align="right">
+       114
+</td>
+<td>
+Den Raphaely
+</td>
+<td>
+Purchasing
+</td>
+<td>
+Purchasing Manager
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Shelli
+</td>
+</tr>
+<tr>
+<td align="right">
+       114
+</td>
+<td>
+Den Raphaely
+</td>
+<td>
+Purchasing
+</td>
+<td>
+Purchasing Manager
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Guy
+</td>
+</tr>
+<tr>
+<td align="right">
+       120
+</td>
+<td>
+Matthew Weiss
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Irene
+</td>
+</tr>
+<tr>
+<td align="right">
+       121
+</td>
+<td>
+Adam Fripp
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+TJ
+</td>
+</tr>
+<tr>
+<td align="right">
+       122
+</td>
+<td>
+Payam Kaufling
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Jennifer
+</td>
+</tr>
+<tr>
+<td align="right">
+       124
+</td>
+<td>
+Kevin Mourgos
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Randall
+</td>
+</tr>
+<tr>
+<td align="right">
+       147
+</td>
+<td>
+Alberto Errazuriz
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Danielle
+</td>
+</tr>
+<tr>
+<td align="right">
+       148
+</td>
+<td>
+Gerald Cambrault
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Harrison
+</td>
+</tr>
+<tr>
+<td align="right">
+       148
+</td>
+<td>
+Gerald Cambrault
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+William
+</td>
+</tr>
+<tr>
+<td align="right">
+       149
+</td>
+<td>
+Eleni Zlotkey
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Alyssa
+</td>
+</tr>
+<tr>
+<td align="right">
+       149
+</td>
+<td>
+Eleni Zlotkey
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Jonathon
+</td>
+</tr>
+<tr>
+<td align="right">
+       205
+</td>
+<td>
+Shelley Higgins
+</td>
+<td>
+Accounting
+</td>
+<td>
+Accounting Manager
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+William
+</td>
+</tr>
+<tr>
+<td align="right">
+       102
+</td>
+<td>
+Lex De Haan
+</td>
+<td>
+Executive
+</td>
+<td>
+Administration Vice President
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Alexander
+</td>
+</tr>
+<tr>
+<td align="right">
+       103
+</td>
+<td>
+Alexander Hunold
+</td>
+<td>
+IT
+</td>
+<td>
+Programmer
+</td>
+<td>
+2014 Jabberwocky Rd,26192,Southlake,United States of America
+</td>
+<td>
+David
+</td>
+</tr>
+<tr>
+<td align="right">
+       122
+</td>
+<td>
+Payam Kaufling
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Ki
+</td>
+</tr>
+<tr>
+<td align="right">
+       124
+</td>
+<td>
+Kevin Mourgos
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Curtis
+</td>
+</tr>
+<tr>
+<td align="right">
+       124
+</td>
+<td>
+Kevin Mourgos
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Kevin
+</td>
+</tr>
+<tr>
+<td align="right">
+       124
+</td>
+<td>
+Kevin Mourgos
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Douglas
+</td>
+</tr>
+<tr>
+<td align="right">
+       146
+</td>
+<td>
+Karen Partners
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Janette
+</td>
+</tr>
+<tr>
+<td align="right">
+       146
+</td>
+<td>
+Karen Partners
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Patrick
+</td>
+</tr>
+<tr>
+<td align="right">
+       147
+</td>
+<td>
+Alberto Errazuriz
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Mattea
+</td>
+</tr>
+<tr>
+<td align="right">
+       147
+</td>
+<td>
+Alberto Errazuriz
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Clara
+</td>
+</tr>
+<tr>
+<td align="right">
+       100
+</td>
+<td>
+Steven King
+</td>
+<td>
+Executive
+</td>
+<td>
+President
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Michael
+</td>
+</tr>
+<tr>
+<td align="right">
+       100
+</td>
+<td>
+Steven King
+</td>
+<td>
+Executive
+</td>
+<td>
+President
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+John
+</td>
+</tr>
+<tr>
+<td align="right">
+       100
+</td>
+<td>
+Steven King
+</td>
+<td>
+Executive
+</td>
+<td>
+President
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Eleni
+</td>
+</tr>
+<tr>
+<td align="right">
+       101
+</td>
+<td>
+Neena Kochhar
+</td>
+<td>
+Executive
+</td>
+<td>
+Administration Vice President
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Susan
+</td>
+</tr>
+<tr>
+<td align="right">
+       114
+</td>
+<td>
+Den Raphaely
+</td>
+<td>
+Purchasing
+</td>
+<td>
+Purchasing Manager
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Alexander
+</td>
+</tr>
+<tr>
+<td align="right">
+       120
+</td>
+<td>
+Matthew Weiss
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Steven
+</td>
+</tr>
+<tr>
+<td align="right">
+       123
+</td>
+<td>
+Shanta Vollman
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Sarah
+</td>
+</tr>
+<tr>
+<td align="right">
+       123
+</td>
+<td>
+Shanta Vollman
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Stephen
+</td>
+</tr>
+<tr>
+<td align="right">
+       124
+</td>
+<td>
+Kevin Mourgos
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Peter
+</td>
+</tr>
+<tr>
+<td align="right">
+       148
+</td>
+<td>
+Gerald Cambrault
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Tayler
+</td>
+</tr>
+<tr>
+<td align="right">
+       149
+</td>
+<td>
+Eleni Zlotkey
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Jack
+</td>
+</tr>
+<tr>
+<td align="right">
+       100
+</td>
+<td>
+Steven King
+</td>
+<td>
+Executive
+</td>
+<td>
+President
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Gerald
+</td>
+</tr>
+<tr>
+<td align="right">
+       100
+</td>
+<td>
+Steven King
+</td>
+<td>
+Executive
+</td>
+<td>
+President
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Lex
+</td>
+</tr>
+<tr>
+<td align="right">
+       100
+</td>
+<td>
+Steven King
+</td>
+<td>
+Executive
+</td>
+<td>
+President
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Neena
+</td>
+</tr>
+<tr>
+<td align="right">
+       108
+</td>
+<td>
+Nancy Greenberg
+</td>
+<td>
+Finance
+</td>
+<td>
+Finance Manager
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Jose Manuel
+</td>
+</tr>
+<tr>
+<td align="right">
+       121
+</td>
+<td>
+Adam Fripp
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Mozhe
+</td>
+</tr>
+<tr>
+<td align="right">
+       121
+</td>
+<td>
+Adam Fripp
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Anthony
+</td>
+</tr>
+<tr>
+<td align="right">
+       123
+</td>
+<td>
+Shanta Vollman
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Britney
+</td>
+</tr>
+<tr>
+<td align="right">
+       123
+</td>
+<td>
+Shanta Vollman
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Samuel
+</td>
+</tr>
+<tr>
+<td align="right">
+       123
+</td>
+<td>
+Shanta Vollman
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Joshua
+</td>
+</tr>
+<tr>
+<td align="right">
+       124
+</td>
+<td>
+Kevin Mourgos
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Alana
+</td>
+</tr>
+<tr>
+<td align="right">
+       145
+</td>
+<td>
+John Russell
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+David
+</td>
+</tr>
+<tr>
+<td align="right">
+       145
+</td>
+<td>
+John Russell
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Peter
+</td>
+</tr>
+<tr>
+<td align="right">
+       145
+</td>
+<td>
+John Russell
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Christopher
+</td>
+</tr>
+<tr>
+<td align="right">
+       100
+</td>
+<td>
+Steven King
+</td>
+<td>
+Executive
+</td>
+<td>
+President
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Adam
+</td>
+</tr>
+<tr>
+<td align="right">
+       100
+</td>
+<td>
+Steven King
+</td>
+<td>
+Executive
+</td>
+<td>
+President
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Payam
+</td>
+</tr>
+<tr>
+<td align="right">
+       100
+</td>
+<td>
+Steven King
+</td>
+<td>
+Executive
+</td>
+<td>
+President
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Shanta
+</td>
+</tr>
+<tr>
+<td align="right">
+       100
+</td>
+<td>
+Steven King
+</td>
+<td>
+Executive
+</td>
+<td>
+President
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Matthew
+</td>
+</tr>
+<tr>
+<td align="right">
+       103
+</td>
+<td>
+Alexander Hunold
+</td>
+<td>
+IT
+</td>
+<td>
+Programmer
+</td>
+<td>
+2014 Jabberwocky Rd,26192,Southlake,United States of America
+</td>
+<td>
+Diana
+</td>
+</tr>
+<tr>
+<td align="right">
+       108
+</td>
+<td>
+Nancy Greenberg
+</td>
+<td>
+Finance
+</td>
+<td>
+Finance Manager
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Daniel
+</td>
+</tr>
+<tr>
+<td align="right">
+       108
+</td>
+<td>
+Nancy Greenberg
+</td>
+<td>
+Finance
+</td>
+<td>
+Finance Manager
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Luis
+</td>
+</tr>
+<tr>
+<td align="right">
+       114
+</td>
+<td>
+Den Raphaely
+</td>
+<td>
+Purchasing
+</td>
+<td>
+Purchasing Manager
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Sigal
+</td>
+</tr>
+<tr>
+<td align="right">
+       121
+</td>
+<td>
+Adam Fripp
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Laura
+</td>
+</tr>
+<tr>
+<td align="right">
+       123
+</td>
+<td>
+Shanta Vollman
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+John
+</td>
+</tr>
+<tr>
+<td align="right">
+       149
+</td>
+<td>
+Eleni Zlotkey
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Ellen
+</td>
+</tr>
+<tr>
+<td align="right">
+       100
+</td>
+<td>
+Steven King
+</td>
+<td>
+Executive
+</td>
+<td>
+President
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Kevin
+</td>
+</tr>
+<tr>
+<td align="right">
+       100
+</td>
+<td>
+Steven King
+</td>
+<td>
+Executive
+</td>
+<td>
+President
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Den
+</td>
+</tr>
+<tr>
+<td align="right">
+       120
+</td>
+<td>
+Matthew Weiss
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Jean
+</td>
+</tr>
+<tr>
+<td align="right">
+       120
+</td>
+<td>
+Matthew Weiss
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Girard
+</td>
+</tr>
+<tr>
+<td align="right">
+       121
+</td>
+<td>
+Adam Fripp
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Julia
+</td>
+</tr>
+<tr>
+<td align="right">
+       121
+</td>
+<td>
+Adam Fripp
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+James
+</td>
+</tr>
+<tr>
+<td align="right">
+       121
+</td>
+<td>
+Adam Fripp
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Nandita
+</td>
+</tr>
+<tr>
+<td align="right">
+       122
+</td>
+<td>
+Payam Kaufling
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Randall
+</td>
+</tr>
+<tr>
+<td align="right">
+       122
+</td>
+<td>
+Payam Kaufling
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Michael
+</td>
+</tr>
+<tr>
+<td align="right">
+       147
+</td>
+<td>
+Alberto Errazuriz
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Sundar
+</td>
+</tr>
+<tr>
+<td align="right">
+       148
+</td>
+<td>
+Gerald Cambrault
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Lisa
+</td>
+</tr>
+<tr>
+<td align="right">
+       149
+</td>
+<td>
+Eleni Zlotkey
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Charles
+</td>
+</tr>
+<tr>
+<td align="right">
+       100
+</td>
+<td>
+Steven King
+</td>
+<td>
+Executive
+</td>
+<td>
+President
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Alberto
+</td>
+</tr>
+<tr>
+<td align="right">
+       100
+</td>
+<td>
+Steven King
+</td>
+<td>
+Executive
+</td>
+<td>
+President
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Karen
+</td>
+</tr>
+<tr>
+<td align="right">
+       108
+</td>
+<td>
+Nancy Greenberg
+</td>
+<td>
+Finance
+</td>
+<td>
+Finance Manager
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+John
+</td>
+</tr>
+<tr>
+<td align="right">
+       108
+</td>
+<td>
+Nancy Greenberg
+</td>
+<td>
+Finance
+</td>
+<td>
+Finance Manager
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Ismael
+</td>
+</tr>
+<tr>
+<td align="right">
+       114
+</td>
+<td>
+Den Raphaely
+</td>
+<td>
+Purchasing
+</td>
+<td>
+Purchasing Manager
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Karen
+</td>
+</tr>
+<tr>
+<td align="right">
+       120
+</td>
+<td>
+Matthew Weiss
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+James
+</td>
+</tr>
+<tr>
+<td align="right">
+       120
+</td>
+<td>
+Matthew Weiss
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Martha
+</td>
+</tr>
+<tr>
+<td align="right">
+       121
+</td>
+<td>
+Adam Fripp
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Alexis
+</td>
+</tr>
+<tr>
+<td align="right">
+       122
+</td>
+<td>
+Payam Kaufling
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Kelly
+</td>
+</tr>
+<tr>
+<td align="right">
+       122
+</td>
+<td>
+Payam Kaufling
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Jason
+</td>
+</tr>
+<tr>
+<td align="right">
+       123
+</td>
+<td>
+Shanta Vollman
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Vance
+</td>
+</tr>
+<tr>
+<td align="right">
+       123
+</td>
+<td>
+Shanta Vollman
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Renske
+</td>
+</tr>
+<tr>
+<td align="right">
+       124
+</td>
+<td>
+Kevin Mourgos
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Donald
+</td>
+</tr>
+<tr>
+<td align="right">
+       145
+</td>
+<td>
+John Russell
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Nanette
+</td>
+</tr>
+<tr>
+<td align="right">
+       146
+</td>
+<td>
+Karen Partners
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Louise
+</td>
+</tr>
+<tr>
+<td align="right">
+       146
+</td>
+<td>
+Karen Partners
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Allan
+</td>
+</tr>
+<tr>
+<td align="right">
+       146
+</td>
+<td>
+Karen Partners
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Lindsey
+</td>
+</tr>
+<tr>
+<td align="right">
+       147
+</td>
+<td>
+Alberto Errazuriz
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Amit
+</td>
+</tr>
+<tr>
+<td align="right">
+       147
+</td>
+<td>
+Alberto Errazuriz
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+David
+</td>
+</tr>
+<tr>
+<td align="right">
+       148
+</td>
+<td>
+Gerald Cambrault
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Elizabeth
+</td>
+</tr>
+<tr>
+<td align="right">
+       149
+</td>
+<td>
+Eleni Zlotkey
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Kimberely
+</td>
+</tr>
+<tr>
+<td align="right">
+       101
+</td>
+<td>
+Neena Kochhar
+</td>
+<td>
+Executive
+</td>
+<td>
+Administration Vice President
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Hermann
+</td>
+</tr>
+<tr>
+<td align="right">
+       101
+</td>
+<td>
+Neena Kochhar
+</td>
+<td>
+Executive
+</td>
+<td>
+Administration Vice President
+</td>
+<td>
+2004 Charade Rd,98199,Seattle,United States of America
+</td>
+<td>
+Shelley
+</td>
+</tr>
+<tr>
+<td align="right">
+       103
+</td>
+<td>
+Alexander Hunold
+</td>
+<td>
+IT
+</td>
+<td>
+Programmer
+</td>
+<td>
+2014 Jabberwocky Rd,26192,Southlake,United States of America
+</td>
+<td>
+Bruce
+</td>
+</tr>
+<tr>
+<td align="right">
+       103
+</td>
+<td>
+Alexander Hunold
+</td>
+<td>
+IT
+</td>
+<td>
+Programmer
+</td>
+<td>
+2014 Jabberwocky Rd,26192,Southlake,United States of America
+</td>
+<td>
+Valli
+</td>
+</tr>
+<tr>
+<td align="right">
+       120
+</td>
+<td>
+Matthew Weiss
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Julia
+</td>
+</tr>
+<tr>
+<td align="right">
+       120
+</td>
+<td>
+Matthew Weiss
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Winston
+</td>
+</tr>
+<tr>
+<td align="right">
+       122
+</td>
+<td>
+Payam Kaufling
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Timothy
+</td>
+</tr>
+<tr>
+<td align="right">
+       122
+</td>
+<td>
+Payam Kaufling
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Hazel
+</td>
+</tr>
+<tr>
+<th scope="col">
+EMPLOYEE_ID
+</th>
+<th scope="col">
+Fullname
+</th>
+<th scope="col">
+DEPARTMENT_NAME
+</th>
+<th scope="col">
+JOB_TITLE
+</th>
+<th scope="col">
+Adresse
+</th>
+<th scope="col">
+Chef Direct
+</th>
+</tr>
+<tr>
+<td align="right">
+       124
+</td>
+<td>
+Kevin Mourgos
+</td>
+<td>
+Shipping
+</td>
+<td>
+Stock Manager
+</td>
+<td>
+2011 Interiors Blvd,99236,South San Francisco,United States of America
+</td>
+<td>
+Trenna
+</td>
+</tr>
+<tr>
+<td align="right">
+       145
+</td>
+<td>
+John Russell
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Oliver
+</td>
+</tr>
+<tr>
+<td align="right">
+       146
+</td>
+<td>
+Karen Partners
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Sarath
+</td>
+</tr>
+<tr>
+<td align="right">
+       148
+</td>
+<td>
+Gerald Cambrault
+</td>
+<td>
+Sales
+</td>
+<td>
+Sales Manager
+</td>
+<td>
+Magdalen Centre, The Oxford Science Park,OX9 9ZB,Oxford,United Kingdom
+</td>
+<td>
+Sundita
+</td>
+</tr>
+<tr>
+<td align="right">
+       201
+</td>
+<td>
+Michael Hartstein
+</td>
+<td>
+Marketing
+</td>
+<td>
+Marketing Manager
+</td>
+<td>
+147 Spadina Ave,M5V 2L7,Toronto,Canada
+</td>
+<td>
+Pat
+</td>
+</tr>
+</table>
+<p>
+
+105 rows selected.<br>
+<br>
+
+
+SQL&gt; 
+<br>
+SQL&gt; SET MARKUP HTML OFF
+<br>
+SQL> SPOOL OFF
